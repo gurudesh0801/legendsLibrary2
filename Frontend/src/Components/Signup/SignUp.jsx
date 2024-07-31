@@ -49,9 +49,10 @@ const SignUp = () => {
         });
 
         if (response.ok) {
-          alert("Sign-up successful!");
+          alert("Sign-up successful!",response.status);
           window.location.href = "/userdashboard";
         } else {
+          alert(response.status)
           alert("Sign-up failed. Please try again.");
         }
       } catch (error) {
