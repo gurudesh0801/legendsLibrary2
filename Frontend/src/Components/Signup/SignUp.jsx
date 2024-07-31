@@ -34,8 +34,13 @@ const SignUp = () => {
         confirmPassword: formData.get("confirmPassword"),
       };
 
+      if (data.password !== data.confirmPassword) {
+        alert("Passwords do not match. Please try again.");
+        return;
+      }
+
       try {
-        const response = await fetch("http://localhost:3000/signup", {
+        const response = await fetch("http://localhost:5000/signup", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -63,7 +68,7 @@ const SignUp = () => {
       </div>
       <div className="signInForm">
         <h1 className="formHeading">Sign Up to Legends Library</h1>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} method="POST" action="http://localhost:5000/signup">
           <label htmlFor="name">Name*</label>
           <input
             type="text"

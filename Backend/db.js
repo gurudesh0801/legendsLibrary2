@@ -1,18 +1,20 @@
-const mysql = require('mysql2');
+const { MongoClient } = require("mongodb");
 
-const connection = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: '',
-  database: 'legendslibrary'
+const uri = "mongodb://localhost:27017";
+const databaseName = "legendslibrary";
+
+const client = new MongoClient(uri, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
 });
 
-connection.connect((err) => {
+client.connect((err) => {
   if (err) {
-    console.error('Error connecting to the database:', err);
+    console.error("Error connecting to the MongoDB database:", err);
     return;
   }
-  console.log('Connected to the MySQL database.');
+  console.log("Connected to the MongoDB database.");
+  const db = client.db(databaseName);
 });
 
-module.exports = connection;
+module.exports = client;
