@@ -10,6 +10,10 @@ const port = 5000;
 // Middleware
 app.use(cors());
 app.use(bodyParser.json());
+app.use(cors({
+  origin: 'https://legends-library.vercel.app/', // replace with your Vercel app domain
+  methods: 'GET,POST',
+}));
 
 // Database connection
 mongoose
