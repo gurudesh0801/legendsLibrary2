@@ -42,6 +42,9 @@ const userSchema = new mongoose.Schema({
 const User = mongoose.model("User", userSchema);
 
 // Routes
+app.get("/",(res, req) =>{
+  res.send("Hello");
+})
 app.post("/signup", async (req, res) => {
   const { name, email, phone, password } = req.body;
 
