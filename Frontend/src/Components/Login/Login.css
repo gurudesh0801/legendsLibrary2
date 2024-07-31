@@ -1,0 +1,148 @@
+/* Login.css */
+
+.loginContainer {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f2f5;
+}
+
+.loginImage {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginImage img {
+  max-width: 65%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.loginForm {
+  flex: 1;
+  padding: 40px;
+  max-width: 500px;
+  background: linear-gradient(180deg,#8bbdfa, #A3CCFD,#E39DFC);
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  height: 36rem;
+}
+
+.letterHeading {
+  margin: 0 0 10px;
+  color: #333;
+  font-size: 14px;
+  text-align: center;
+}
+
+.formHeading {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.loginForm .loginFormDetails {
+  display: flex;
+  flex-direction: column;
+  box-shadow: none;
+}
+
+.loginForm label {
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #555;
+}
+
+.loginForm input[type="email"],
+.loginForm input[type="password"] {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  width: 100%;
+}
+
+.loginForm input[type="submit"] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border: none;
+  background-color: #b400a8;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 5rem;
+}
+
+.loginForm input[type="submit"]:hover {
+  background-color: #d900ff;
+}
+
+.loginForm .social-icons {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.loginForm .social-icons i {
+  font-size: 24px;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.loginForm .social-icons i:hover {
+  color: #1da1f2; /* Example hover color for icons */
+}
+.dontAcccount {
+  text-align: center;
+}
+.dontAcccount a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.dontAcccount a:hover {
+  text-decoration: underline;
+}
+.adminLogin {
+  text-align: center;
+}
+.adminLogin a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.adminLogin a:hover {
+  text-decoration: underline;
+}
+.or {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .loginContainer {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .loginImage {
+    margin-bottom: 20px;
+  }
+
+  .loginForm {
+    width: 90%;
+    max-width: none;
+  }
+  .or{
+    font-size: 1em;
+  }
+}

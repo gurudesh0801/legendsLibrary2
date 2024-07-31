@@ -1,0 +1,109 @@
+/* LandingPage.css */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+.mainDiv {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.textContent {
+  flex: 1;
+  max-width: 50%;
+  margin-bottom: 10rem;
+}
+
+.heading {
+  font-size: 6rem;
+  margin-bottom: 20px;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+}
+
+.textContent .tagline {
+  font-size: 1rem;
+  color: black;
+  margin-left: 0;
+}
+
+.imgContents {
+  flex: 1;
+  max-width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imgContents img {
+  max-height: 100%;
+  width: auto;
+}
+.btn1 {
+  width: 10rem;
+  margin-top: 1rem;
+  padding: 8px 10px;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+.img img {
+  position: absolute;
+  top: 18rem;
+  left: 25rem;
+  width: 28rem;
+}
+
+@media (max-width: 768px) {
+  .mainDiv {
+    padding: 20px;
+    flex-direction: column;
+  }
+
+  .textContent {
+    max-width: 100%;
+    height: 1rem;
+  }
+
+  .heading {
+    font-size: 4rem;
+    margin-left: 0;
+  }
+
+  .textContent p {
+    font-size: 1rem;
+    margin-left: 0;
+  }
+
+  .imgContents img {
+    display: none;
+  }
+  .img img {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .heading {
+    font-size: 3rem;
+  }
+
+  .textContent p {
+    font-size: 0.9rem;
+  }
+
+  .imgContents img {
+    max-height: 40vh;
+  }
+  .img img {
+    display: none;
+  }
+}
